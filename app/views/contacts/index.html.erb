@@ -1,0 +1,29 @@
+
+<div class="row">
+  <div class="span9" id="add_contact_bar">
+    <%= simple_form_for(Contact.new, :html => { :class => "well form-inline"}) do |c| %>
+      <%= c.input :name, :label => false, :placeholder => "Name", :input_html => { :class => "input-medium", :id => "name"} %>
+      <%= c.input :email, :label => false, :placeholder => "Email", :input_html => { :class => "input-xlarge", :id => "email"} %>
+      <%= c.input :year, :collection => year_options, :label => false, :input_html => { :class => "input-small", :id => "year"} %>
+      <%= c.button :submit, " + ", :id => "plus", :class => "btn-success" %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="span8 offset5">
+    <table class="table" id="contacts" data-remote="true">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Class</th>
+      </tr>
+      <% @contacts.each do |contact| %>
+        <tr class="contact_row">
+          <td><%= contact.name %></td>
+          <td><%= contact.email %></td>
+          <td><%= contact.year %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

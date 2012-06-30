@@ -1,0 +1,49 @@
+body{
+	padding-top: 30px;
+}
+
+.input{
+    display: inline;
+}
+
+.input-xmini{
+	width: 35px;
+}
+
+.input #name{
+	margin-left: 0px;
+}
+
+.input #email{
+	margin-left: 35px;
+}
+
+.input #year{
+	margin-left: 35px;
+}
+
+.login{
+	margin-left: 1250px;
+}
+
+#plus{
+	margin-left: 20px;
+}
+
+#icon{
+	margin-left: 10px;
+}
+
+#contacts{
+	margin-top: 100px;
+}
+
+#add_contact_bar{
+	position: fixed;
+	margin-left: 380px;
+}
+
+.table{
+	font-size: 19px;
+	line-height: 27px;
+}
